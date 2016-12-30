@@ -1,0 +1,21 @@
+﻿<Window x:Class="DollarFamily.Symwin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Symbol for Dataset" Height="400" Width="600">
+    <Grid>
+        <InkCanvas x:Name="Symink" Background="#FFF0FBFF" Margin="100,10,10,10"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="90" Margin="10,10,0,0">
+            <Button x:Name="Clear_Canvas" Margin="0,0,0,10" Content="Clear" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Clear_Canvas_Click" BorderBrush="#FF707070" Width="75"/>
+            <Button x:Name="Createsym" Margin="0,0,0,10" Content="Save" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Createsym_Click" BorderBrush="#FF707070" Width="75"/>
+            <Label x:Name="Database_label" Margin="0,0,0,0" Content="Load Symbol" VerticalAlignment="Top" HorizontalAlignment="Left" Height="25"/>
+            <ComboBox x:Name="Symlist" Margin="0,0,0,10" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True" Initialized="Symlist_Initialized" SelectionChanged="Symlist_SelectionChanged" BorderBrush="#FF707070" Width="75">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</Window>
